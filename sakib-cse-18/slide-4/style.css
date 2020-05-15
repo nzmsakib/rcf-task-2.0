@@ -12,6 +12,10 @@
   font-family: ArialRMTB;
   src: url(../fonts/Arial-Rounded-MT-Bold.TTF);
 }
+@font-face {
+  font-family: Bahn;
+  src: url(../fonts/Bahnschrift.ttf);
+}
 
 body {
   width: 100%;
@@ -38,7 +42,11 @@ body {
   rgba(var(--rgb-lavender), 1.0));
   --gradient-sidebar-sleep : linear-gradient(rgba(var(--rgb-white), 0.39),
   rgba(var(--rgb-white), 0.39));
+  --gradient-btn-sleep : linear-gradient(rgba(var(--rgb-white), 0.21),
+  rgba(var(--rgb-white), 0.21));
+
   --shadow : 0.3rem 0.3rem 4pt rgba(var(--rgb-code), var(--opacity-2));
+  --shadow-card : 9pt 9pt 18pt rgba(var(--rgb-black), 0.24);
   --border-primary : 0.2rem solid var(--color-primary);
   --border-rgb : 0.2rem solid var(--color-rgb);
 }
@@ -56,21 +64,22 @@ body {
   max-width: 4.2rem;
   left: 0;
   overflow: hidden;
-  background: var(--gradient-mini-nav);
   z-index: 2;
+  position: relative;
 }
 
 .vertical-nav li a {
+  background: var(--gradient-mini-nav);
   display: block;
   padding: 4rem 1rem;
 }
 
-.vertical-nav li a.active{
-  
+.upper .vertical-nav .garbage {
+  background: var(--gradient-mini-nav);
 }
 
 .vertical-nav li a:hover:not(.active) {
-
+  background: var(--gradient-sidebar);
 }
 
 .vertical-nav li a img {
@@ -79,13 +88,13 @@ body {
 
 .sidenav {
   display: none;
-  width: 22rem;
+  max-width: 22rem;
   background: var(--gradient-sidebar);
-  height: 100%;
-  position: fixed;
+  margin-left: -4.2rem;
+  position: relative;
   top: 0;
   left: 0;
-  transition: display 0.5s;
+  transition: display 2s;
   z-index: 1;
 }
 
@@ -97,6 +106,62 @@ body {
   font-weight: bold;
   background: var(--gradient-sidebar-sleep);
   color: var(--color-white);
+}
+
+.sidenav .card-profile {
+  text-align: center;
+  background: none;
+  margin: 3rem 1.2rem;
+  margin-left: 4.2rem;
+  font-family: CalibriL;
+  font-size: 1rem;
+  color: var(--color-white);
+  border: none;
+}
+
+.sidenav .card-profile .card-title {
+  font-size: 2rem;
+  text-shadow: 2pt 2pt 3pt rgba(0, 0, 0, .43);
+}
+
+.sidenav .card-profile .date {
+  font-size: 1.2rem;
+}
+
+.sidenav .card-profile .btns {
+  padding: 2rem 0;
+}
+
+.sidenav .card-profile .btns button {
+  background: var(--gradient-btn-sleep);
+  width: 2.8rem;
+  height: 2.8rem;
+  margin: 0 4px;
+}
+
+.sidenav .card-profile .btns button.active{
+  background-color: rgb(var(--rgb-white));
+}
+
+.sidenav .card-profile .propic {
+  width: 100px;
+  height: 100px;
+  margin: 1rem auto;
+  position: relative;
+}
+
+.sidenav .card-profile .propic .pic-border{
+  width: 200px;
+  height: 200px;
+}
+
+.sidenav .card-profile .propic .thepic{
+  width: 100px;
+  height: 100px;
+  background-image: var(--old-man);
+  background-position: 45% 50%;
+  background-size: cover;
+  clip-path: circle(50% at 50% 50%);
 }
 
 .sidenav .task-card .column-1 {
@@ -124,6 +189,17 @@ body {
   transition: margin-left 0.5s;
 }
 
+.main-body .top-badges .badge {
+  background-color: rgb(255, 203, 224);
+  font-family: Calibri;
+  font-weight: bold;
+  color: rgb(255, 122, 173);
+  margin: 1rem 2px;
+  width: 8rem;
+  padding: 6px 12px;
+  font-size: 1.4rem;
+}
+
 .main-body .title {
   font-size: 2.44rem;
   line-height: 100%;
@@ -134,6 +210,8 @@ body {
 }
 
 .main-body .card {
+  box-shadow: var(--shadow-card);
+  border: none;
 }
 
 .main-body .card .row {
@@ -176,7 +254,28 @@ body {
 /* Footer */
 
 footer{
-  background-color: black;
-  height: 5rem;
+  background-color: rgb(23, 45, 56);
+  color : var(--color-white);
+  font-family: Bahn;
+  font-weight: lighter;
   z-index: 5;
+}
+
+.end-era {
+  padding: 2rem 4.2rem;
+}
+
+.end-era .one {
+  border-left: 8px solid var(--color-white);
+  padding: 1.4rem 1.4rem;
+}
+.end-era .three {
+  padding: 1.4rem 1.4rem;
+  border-right: 8px solid var(--color-white);
+}
+.end-era .two {
+  background-color: var(--color-white);
+  max-width: 8px;
+  padding: 0 0;
+  height: auto;
 }

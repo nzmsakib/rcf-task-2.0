@@ -39,11 +39,26 @@
                     <img src="../images/2.png" alt="home">
                 </a>
             </li>
+            <div class="garbage h-100"></div>
         </ul>
 
         <div class="col sidenav" id="navside">
             <div class="card card-profile">
-
+                <div class="card-title">Hello, <b>Rafiq</b> vai</div>
+                <div class="propic">
+                    <div class="pic-border">
+                        <div class="thepic"></div>
+                    </div>
+                </div>
+                <div class="date">
+                    20<sup>th</sup> April, 2020
+                </div>
+                <div class="btns">
+                    <button type="button" class="btn rounded-pill ">7</button>
+                    <button type="button" class="btn rounded-pill active">8</button>
+                    <button type="button" class="btn rounded-pill ">9</button>
+                    <button type="button" class="btn rounded-pill ">10</button>
+                </div>
             </div>
             <div class="card task-card">
                 <div class="card-text">
@@ -188,21 +203,30 @@
     </main>
 
     <footer>
-        <section class="end-era">
-
-        </section>
+        <div class="end-era">
+            <div class="row justify-content-between">
+                <div class="col-4 one text-left">
+                    To be an awesome developer you have to have strong knowledge on html & css. The css is most important here. If you have the knowledge on html & css then it’s easy to understand any
+                </div>
+                <div class="col two">
+                    
+                </div>
+                <div class="col-4 three text-right">
+                    To be an awesome developer you have to have strong knowledge on html & css. The css is most important here. If you have the knowledge on html & css then it’s easy to understand any
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
         function openNav() {
             document.getElementById("navside").style.display = "block";
-            document.getElementById("main").style.marginLeft = "18rem";
         }
 
         function closeNav() {
             document.getElementById("navside").style.display = "none";
-            document.getElementById("main").style.marginLeft = "0";
 
+            $(".vertical-nav").find("a.active").css("background", "var(--gradient-mini-nav)");
             $(".vertical-nav").find("a.active").removeClass("active");
         }
 
@@ -213,8 +237,10 @@
         );
 
         $(".vertical-nav .nav-link").on("click", function () {
+            $(".vertical-nav").find("a.active").css("background", "var(--gradient-mini-nav)");
             $(".vertical-nav").find("a.active").removeClass("active");
             $(this).addClass("active");
+            $(this).css("background", "none");
             openNav();
         });
     </script>

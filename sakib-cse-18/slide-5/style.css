@@ -54,13 +54,36 @@ html, body {
 }
 
 .site-head .row-2 {
-    height: 5rem;
+    font-stretch: condensed;
+    margin-top: 2.6rem;
+    height: auto;
     width: 100%;
     background-color: rgb(var(--rgb-w-4));
+    color: rgb(var(--rgb-d-2));
+}
+
+.site-head .row-2 .root {
+    margin: 0 8rem;
+}
+
+.site-head .row-2 .logo {
+    font-size: 6.4rem;
+    line-height: normal;
+    font-weight: bold;
+}
+
+.site-head .row-2 span {
+    color: rgb(var(--rgb-y-3));
+}
+
+.site-head .row-2 .contact {
+    font-size: 2.4rem;
+    padding: 12px 8px;
+    line-height: normal;
 }
 
 .site-head .row-3 {
-    height: 4.4rem;
+    height: 4.2rem;
     width: 100%;
     background-color: rgb(var(--rgb-d-1));
 }
@@ -69,18 +92,23 @@ html, body {
     padding: 0 8rem;
 }
 
-.site-head .row-3 .navbar .navbar-nav .nav-item a {
-    padding: 0 1.2rem;
+.site-head .row-3 .navbar .navbar-nav .nav-item .nav-link {
+    padding: 0 1rem;
+    margin: 0 4px;
     margin-top: 4px;
     color: rgb(var(--rgb-w-4));
     font-stretch: condensed;
     font-size: 3rem;
     line-height: normal;
     text-transform: uppercase;
-
 }
 
 .site-head .row-3 .navbar .navbar-nav .nav-item a.active {
+    background-color: rgb(var(--rgb-w-4));
+    color: rgb(var(--rgb-d-2));
+}
+
+.site-head .row-3 .navbar .navbar-nav .nav-item a:hover:not(.active) {
     background-color: rgb(var(--rgb-w-4));
     color: rgb(var(--rgb-d-2));
 }
@@ -274,6 +302,9 @@ html, body {
     background-color: rgb(var(--rgb-y-3));
     color: rgb(var(--rgb-d-2));
     width: fit-content;
+    font-size: 1.2rem;
+    font-family: Bahn;
+    font-stretch: condensed;
 }
 
 .site-main .below-clp .root-row .left .card {
