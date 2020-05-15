@@ -36,7 +36,7 @@ html, body {
 }
 
 .site-head .row-1 {
-    height: 2.6rem;
+    height: auto;
     width: 100%;
     background-color: rgb(var(--rgb-d-1));
 }
@@ -83,7 +83,7 @@ html, body {
 }
 
 .site-head .row-3 {
-    height: 4.2rem;
+    height: auto;
     width: 100%;
     background-color: rgb(var(--rgb-d-1));
 }
@@ -94,8 +94,7 @@ html, body {
 
 .site-head .row-3 .navbar .navbar-nav .nav-item .nav-link {
     padding: 0 1rem;
-    margin: 0 4px;
-    margin-top: 4px;
+    margin: 4px 4px;
     color: rgb(var(--rgb-w-4));
     font-stretch: condensed;
     font-size: 3rem;
