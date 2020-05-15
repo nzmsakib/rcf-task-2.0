@@ -1,0 +1,85 @@
+@media only screen and (max-width: 1200px) {
+    .header-era .main-head .body-head .scnd .card-3,
+    .header-era .main-head .body-head .scnd .card-2 {
+        min-width: 10rem;
+    }
+    .header-era .main-head .body-head .scnd .card-1 {
+        min-width: 12.8rem;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .header-era .main-head .body-head .scnd .card-columns {
+        gap: 25%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .header-era .main-head .body-head .first .title {
+        font-size: 2rem;
+    }
+    .header-era .main-head .body-head .first .subtext{
+        font-size: 1.4rem;
+    }
+    .header-era .main-head .body-head .scnd .card-columns {
+        gap: 18%;
+        margin-left: 12px;
+    }
+    .header-era .main-head {
+        padding: 2rem 1rem;
+    }
+    .header-era .main-head .body-head {
+        padding: 1rem 1rem;
+    }
+    .header-era .main-head .body-head .scnd {
+        padding: 0 0;
+        margin: 0 0;
+    }
+    .header-era .main-head .body-head .first {
+        padding: 0 0;
+        margin: 0 0;
+    }
+    .middle-body .continer {
+        margin: 2rem 1rem;
+    }
+    .end-era .continer {
+        padding: 0 1rem;
+    }
+    .end-era {
+        padding: 2rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .header-era .main-head .navbar .links {
+        margin-left: 2rem;
+        margin-bottom: 8px;
+        font-size: 1.4rem;
+    }
+    .header-era .main-head .body-head .first {
+        max-width: 22rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header-era .main-head .navbar .nav-item{
+        display: block;
+        margin: 0 auto;
+    }
+    .header-era .main-head .navbar .links {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+    .header-era .main-head .body-head .first {
+        max-width: 100%;
+    }
+    .header-era .main-head .body-head .scnd{
+        margin-top: 2rem;
+    }
+    .header-era .main-head .body-head .scnd .card-2 {
+        margin-bottom: 1rem;
+    }
+    .middle-body .right {
+        padding-top: 2rem;
+    }
+}

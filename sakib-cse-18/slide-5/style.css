@@ -1,0 +1,548 @@
+/* Fonts and variables */
+
+@font-face{
+    font-family: Bahn;
+    src: url(../fonts/Bahnschrift.ttf);
+}
+@font-face{
+    font-family: CalibriL;
+    src: url(../fonts/calibri-light.ttf);
+}
+@font-face {
+    font-family: ArialRMTB;
+    src: url(../fonts/Arial-Rounded-MT-Bold.TTF);
+}
+  
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+  
+:root {
+    --rgb-d-1 : 25, 46, 63;
+    --rgb-d-2 : 23, 45, 56;
+    --rgb-y-3 : 245, 164, 10;
+    --rgb-w-4 : 255, 255, 255;
+    --rgb-b-5 : 0, 0, 0;
+
+    --image-canvas : url(../images/4.jpg);
+    --image-old-man : url(../images/12.jpg);
+
+    --shadow-1 : 3pt 3pt 4pt rgba(0, 0, 0, 0.4);
+}
+
+.site-head {
+    font-family: Bahn;
+}
+
+.site-head .row-1 {
+    height: 2.6rem;
+    width: 100%;
+    background-color: rgb(var(--rgb-d-1));
+}
+
+.site-head .row-1 .navbar {
+    padding: 4px 8rem;
+}
+
+.site-head .row-1 .navbar .navbar-nav .nav-item a {
+    padding: 0 1rem;
+    color: rgb(var(--rgb-w-4));
+    font-weight: lighter;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.site-head .row-2 {
+    height: 5rem;
+    width: 100%;
+    background-color: rgb(var(--rgb-w-4));
+}
+
+.site-head .row-3 {
+    height: 4.4rem;
+    width: 100%;
+    background-color: rgb(var(--rgb-d-1));
+}
+
+.site-head .row-3 .navbar .navbar-nav {
+    padding: 0 8rem;
+}
+
+.site-head .row-3 .navbar .navbar-nav .nav-item a {
+    padding: 0 1.2rem;
+    margin-top: 4px;
+    color: rgb(var(--rgb-w-4));
+    font-stretch: condensed;
+    font-size: 3rem;
+    line-height: normal;
+    text-transform: uppercase;
+
+}
+
+.site-head .row-3 .navbar .navbar-nav .nav-item a.active {
+    background-color: rgb(var(--rgb-w-4));
+    color: rgb(var(--rgb-d-2));
+}
+
+.site-main .canvas {
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    font-family: Bahn;
+    overflow: hidden;
+}
+
+.site-main .canvas .bg-img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100);
+}
+
+.site-main .canvas .bg-img img{
+    width: 100%;
+    height: 30rem;
+}
+
+.site-main .canvas .cropped {
+    background-color: rgba(var(--rgb-w-4), 0.74);
+    height: inherit;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
+    position: absolute;
+    top: 0;
+}
+
+.site-main .canvas .can-left {
+    width: 4rem;
+    font-stretch: condensed;
+    font-size: 2.4rem;
+    line-height: normal;
+    position: absolute;
+    bottom: 0;
+    left: 8rem;
+    color: rgb(var(--rgb-y-3));
+}
+
+.site-main .canvas .can-right {
+    width: 6rem;
+    font-size: 2.4rem;
+    font-stretch: condensed;
+    line-height: normal;
+    position: absolute;
+    bottom: 0;
+    right: 8rem;
+    color: rgb(var(--rgb-y-3));
+}
+
+.site-main .canvas .title {
+    width: 50%;
+    font-stretch: condensed;
+    font-size: 3.8rem;
+    line-height: normal;
+    position: absolute;
+    top: 2rem;
+    left: 25%;
+}
+
+.site-main .canvas .title span {
+    font-weight: bold;
+    border-bottom: 4px solid rgb(var(--rgb-d-2));
+}
+
+.site-main .canvas .descript {
+    width: 50%;
+    font-weight: lighter;
+    font-size: 2rem;
+    line-height: normal;
+    color: rgb(var(--rgb-b-5));
+    position: absolute;
+    bottom: 2.4rem;
+    left: 25%;
+}
+
+.site-main .clipped .row {
+    column-gap: 1.6rem;
+    margin: 2.4rem 8rem;
+    font-family: Bahn;
+}
+
+.site-main .clipped .acard .left {
+    border-radius: 0;
+    height: 8rem;
+    background-color: rgb(var(--rgb-y-3));
+    clip-path: polygon(4% 4%, 85% 4%, 98.5% 50%, 85% 96%, 4% 96%,
+                        4% 100%, 85% 100%, 100% 50%, 85% 0, 0 0,
+                        0 100%, 4% 100%);
+}
+
+.site-main .clipped .acard .titlel {
+    position: absolute;
+    left: 3rem;
+    top: 12px;
+    font-size: 2.8rem;
+    font-stretch: condensed;
+}
+
+.site-main .clipped .acard .descrl {
+    position: absolute;
+    left: 3rem;
+    top: 4.2rem;
+    line-height: normal;
+    width: 60%;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.site-main .clipped .acard .right {
+    border-radius: 0;
+    height: 8rem;
+    background-color: rgb(var(--rgb-y-3));
+    clip-path: polygon(4% 4%, 85% 4%, 98.5% 50%, 85% 96%, 4% 96%,
+                        4% 100%, 85% 100%, 100% 50%, 85% 0, 0 0,
+                        0 100%, 4% 100%);
+    transform: rotate(180deg);
+}
+
+.site-main .clipped .acard .titler {
+    text-align: right;
+    position: absolute;
+    right: 3rem;
+    top: 12px;
+    font-size: 2.8rem;
+    font-stretch: condensed;
+}
+
+.site-main .clipped .acard .descrr {
+    text-align: right;
+    position: absolute;
+    right: 3rem;
+    top: 4.2rem;
+    line-height: normal;
+    width: 60%;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.site-main .below-clp .root-row {
+    margin: 1rem 8rem;
+    font-family: Bahn;
+}
+
+.site-main .below-clp .root-row .left .cust-btn .cont {
+    width: 100%;
+    height: 3.2rem;
+    background-color: rgb(var(--rgb-y-3));
+    clip-path: polygon(0 0, 0 100%, 40.6% 100%, 51.2% 0,
+                        100% 0, 100% 100%, 48.8% 100%, 59.4% 0);
+}
+
+.site-main .below-clp .root-row .left .cust-btn .cont .crp {
+    margin: 2px 2px;
+    width: 99%;
+    height: 93%;
+    border-radius: 0;
+    background-color: rgb(var(--rgb-d-2));
+    clip-path: polygon(0 0, 0 100%, 40% 100%, 50% 0,
+                        100% 0, 100% 100%, 50% 100%, 60% 0);
+}
+
+.site-main .below-clp .root-row .left .cust-btn .not-crp {
+    width: 70%;
+}
+
+.site-main .below-clp .root-row .left .cust-btn .v1 {
+    font-size: 2rem;
+    font-stretch: condensed;
+    position: absolute;
+    top: 4px;
+    left: 1rem;
+    color: rgb(var(--rgb-w-4));
+}
+
+.site-main .below-clp .root-row .left .cust-btn .not-crp .v2 {
+    font-size: 2rem;
+    font-stretch: condensed;
+    position: absolute;
+    top: 4px;
+    right: 9.4rem;
+    color: rgb(var(--rgb-w-4));
+}
+
+.site-main .below-clp .root-row .left .cust-btn .normal {
+    border-radius: 0;
+    background-color: rgb(var(--rgb-y-3));
+    color: rgb(var(--rgb-d-2));
+    width: fit-content;
+}
+
+.site-main .below-clp .root-row .left .card {
+    width: 85%;
+    height: 6.2rem;
+    border-radius: 0;
+    background-color: rgb(var(--rgb-y-3));
+}
+
+.site-main .below-clp .root-row .left .sty-1 {
+    clip-path: polygon(3% 98.6%, 3% 0, 0 0, 0 100%,
+                       100% 100%, 100% 0, 76% 0, 76% 98.6%);
+}
+
+.site-main .below-clp .root-row .left .sty-2 {
+    clip-path: polygon(3% 99%, 3% 0, 0 0, 0 100%,
+                       52% 100%, 52% 1%, 76% 1%, 76% 100%,
+                       100% 100%, 100% 0, 28% 0, 28% 99%);
+}
+
+.site-main .below-clp .root-row .left .card-1 .inside {
+    position: absolute;
+    right: 6px;
+    font-weight: lighter;
+    width: 22%;
+    top: 1rem;
+}
+
+.site-main .below-clp .root-row .left .card-1 .title {
+    position: absolute;
+    font-stretch: condensed;
+    font-size: 2.3rem;
+    top: 6rem;
+    left: 1.6rem;
+}
+
+.site-main .below-clp .root-row .left .card-1 .descr {
+    position: absolute;
+    font-weight: lighter;
+    font-size: 1rem;
+    width: 60%;
+    top: 9rem;
+    left: 1.6rem;
+}
+
+.site-main .below-clp .root-row .left .card-2 .inside-1 {
+    position: absolute;
+    left: 28.5%;
+    font-weight: lighter;
+    width: 22%;
+    top: 1rem;
+}
+
+.site-main .below-clp .root-row .left .card-2 .inside-2 {
+    position: absolute;
+    right: 6px;
+    font-weight: lighter;
+    width: 22%;
+    top: 1rem;
+}
+
+.site-main .below-clp .root-row .left .card-2 .title-1 {
+    position: absolute;
+    left: 12px;
+    font-stretch: condensed;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    width: 22%;
+    bottom: 0;
+}
+
+.site-main .below-clp .root-row .left .card-2 .title-2 {
+    position: absolute;
+    right: 10.4rem;
+    font-stretch: condensed;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    width: 22%;
+    bottom: 0;
+}
+
+.site-main .below-clp .root-row .right .infos {
+    max-width: 55%;
+}
+
+.site-main .below-clp .root-row .right .infos .ques {
+    font-size: 3rem;
+    font-stretch: condensed;
+    line-height: normal;
+}
+
+.site-main .below-clp .root-row .right .infos .name {
+    color: rgb(var(--rgb-y-3));
+    letter-spacing: 15px;
+    font-size: 2rem;
+    line-height: normal;
+    margin-top: -8px;
+    font-stretch: condensed;
+}
+
+.site-main .below-clp .root-row .right .infos .info {
+    padding-top: 1.2rem;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    line-height: normal;
+}
+
+.site-main .below-clp .root-row .right .infos .descr {
+    padding-top: 1rem;
+    font-weight: lighter;
+    font-size: 12px;
+    line-height: normal;
+}
+
+.site-main .below-clp .root-row .right .infos mark {
+    background-color: rgb(var(--rgb-y-3));
+}
+
+.site-main .below-clp .root-row .right .pros {
+    max-width: 45%;
+    position: relative;
+}
+
+.site-main .below-clp .root-row .right .pros .big {
+    width: 200px;
+    height: 200px;
+    margin-top: -2rem;
+    filter: drop-shadow(var(--shadow-1));
+}
+
+.site-main .below-clp .root-row .right .pros .mid {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(var(--shadow-1));
+    position: absolute;
+    bottom: 1rem;
+}
+
+.site-main .below-clp .root-row .right .pros .sml {
+    width: 30px;
+    height: 30px;
+    filter: drop-shadow(var(--shadow-1));
+    position: absolute;
+    left: 6rem;
+    bottom: 2rem;
+}
+
+.site-main .below-clp .root-row .right .pros .propic {
+    background-image: var(--image-old-man);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(50% at 50% 50%);
+}
+
+
+
+/* Footer */
+
+.end-era {
+    background-image: url(../images/16.png);
+    width: 100%;
+    background-repeat: repeat;
+    background-size: cover;
+    height: 25rem;
+    margin-top: -5rem;
+    font-family: Bahn;
+    font-weight: lighter;
+}
+
+.end-era .row {
+    width: 100%;
+    height: 100%;
+    margin: 0 8rem;
+}
+
+.end-era .left {
+    max-width: 20%;
+    position: relative;
+}
+
+.end-era .left .lf{
+    width: 80%;
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+}
+
+.end-era .left .marked {
+    padding: 8px 0;
+    font-size: 11px;
+    line-height: 1rem;
+}
+
+.end-era .left mark {
+    background-color: rgb(var(--rgb-y-3));
+}
+
+.end-era .midle {
+    max-width: 30%;
+    position: relative;
+}
+
+.end-era .midle .info {
+    width: 70%;
+    position: absolute;
+    left: 0;
+    bottom: 2.2rem;
+    color: rgb(var(--rgb-w-4));
+    font-size: 1.2rem;
+    line-height: normal;
+}
+
+.end-era .right {
+    position: relative;
+}
+
+.end-era .right .for-shadow {
+    width: 4rem;
+    height: 4rem;
+    filter: drop-shadow(3pt 3pt 4pt rgba(var(--rgb-y-3), 0.4));
+    position: absolute;
+    top: 2rem;
+    left: 30%;
+}
+
+.end-era .right .propic {
+    background-image: var(--image-old-man);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.end-era .right .btns {
+    padding-top: 6.8rem;
+
+}
+
+.end-era .right .btns .b1{
+    background-color: rgb(var(--rgb-y-3));
+    padding: 2px 2.2rem;
+    font-size: 14px;
+    margin-left: -1rem;
+    text-transform: uppercase;
+}
+
+.end-era .right .btns .b2{
+    border: 2px solid rgb(var(--rgb-w-4));
+    color: rgb(var(--rgb-w-4));
+    padding: 0 1.4rem;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.end-era .right .info {
+    padding-top: 2.4rem;
+    width: 45%;
+    color: rgb(var(--rgb-w-4));
+    font-size: 1.2rem;
+    line-height: normal;
+}
+
+.end-era .right .marked {
+    padding-top: 2.4rem;
+    width: 45%;
+    font-size: 12px;
+    line-height: normal;
+}
